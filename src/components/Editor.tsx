@@ -1,5 +1,6 @@
 import { Col, Row, Space, Typography } from 'antd';
 import { JsonEditor } from 'json-edit-react';
+import { FaCode } from 'react-icons/fa';
 import type { EditorProps } from '../types';
 
 
@@ -16,7 +17,10 @@ export function Editor({ label, value, onChange }: EditorProps) {
     <Row>
       <Col span={24}>
         <Space direction="vertical" size={16} style={{ width: '100%' }}>
-          <Typography.Title level={5} style={{ margin: 0 }}>{label}</Typography.Title>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <FaCode style={{ fontSize: '16px', color: '#1890ff' }} />
+            <Typography.Title level={5} style={{ margin: 0 }}>{label}</Typography.Title>
+          </div>
           <div style={{
             height: '350px',
             overflow: 'auto',

@@ -1,4 +1,5 @@
 import type { FormSchema, UIFormSchema } from '@xubylele/antd-form-generator';
+import type { ReactNode } from 'react';
 
 export interface EditorProps {
   label: string;
@@ -29,6 +30,21 @@ export type PlaygroundExample = {
   initialValues?: Record<string, unknown>;
 };
 
-export type UseAppProps = {
+export type UsePlaygroundProps = {
   setSubmited: (values: Record<string, unknown>) => void;
 };
+
+export type AppLayoutProps = {
+  children: ReactNode;
+}
+
+export interface LayoutState {
+  isCollapsed: boolean;
+  isMobile: boolean;
+}
+
+export interface NavigationItem {
+  key: string;
+  label: string;
+  icon?: ReactNode;
+}
